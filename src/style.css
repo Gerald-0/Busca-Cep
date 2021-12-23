@@ -1,0 +1,88 @@
+.container{
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background: linear-gradient(to right, #FA8BFF , #2BD2FF , #2BFF88);
+}
+.title{
+    font-size: 70px;
+    color: rgb(240, 232, 232);
+    animation: flipTitle 2s;
+}
+.containerInput{
+    background-color: #ffffff48;
+    display: flex;
+    padding: 15px;
+    margin: 40px 0px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.containerInput input{
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    outline: none;
+    margin-right: 8px;
+}
+.containerInput input::placeholder{
+    color: #000;
+}
+.buttonSearch{
+    background-color: transparent;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.buttonSearch :hover{
+    transform: scale(1.2);
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.473);
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+    width: 500px;
+    border-radius: 8px;
+}
+.main h2{
+   font-size: 39px;
+}
+.main span{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+@keyframes flipTitle {
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
+
+@media (max-width: 620px) {
+    .title{
+        font-size: 35px;
+    }
+    .main h2{
+        font-size: 28px;
+    }
+    .main{
+        width: 80%;
+        min-height: 250px;
+    }
+    .container{
+        background-image: url(./giphy\ \(14\).gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
